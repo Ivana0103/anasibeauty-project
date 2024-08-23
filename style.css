@@ -11,7 +11,11 @@
     --denary-color: #ac2351;
 
     --transition: 0.3s ease-in-out;
+
+    --h2-margin-bottom: 1rem;
+    --h2-color: var(--quinary-color);
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -199,9 +203,9 @@ a {
 }
 
 .image {
-
-    height: auto;
-    width: 300px;
+    height: 420px;
+    width: 600px;
+    object-fit: cover;
     animation: fade 3s ease-in-out alternate;
     border-radius: 30px 50px;
     border: 3px solid var(--primary-color);
@@ -212,7 +216,7 @@ a {
     height: 44px;
     background-color: var(--tertiary-color);
     color: var(--nonary-color);
-    border-color:var(--tertiary-color);
+    border-color: var(--tertiary-color);
     box-shadow: var(--quinary-color);
     cursor: pointer;
     border-radius: 12px 24px;
@@ -241,28 +245,32 @@ a {
     color: var(--quaternary-color);
 }
 
-.price {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: var(--secondary-color);
-    margin: 20px;
-    margin-bottom: 25px;
-
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-inline: 24px;
+    padding-block: 48px;
+    align-items: center;
 }
 
-.column {
+.services__text {
+    color: var(--secondary-color);
+    grid-column: 1;
+}
 
+.services__text h2 {
+    color: var(--h2-color);
+    margin-bottom: var(--h2-margin-bottom);
+}
+
+.services__table {
     background-color: var(--denary-color);
     padding: 8px;
     border-radius: 5px;
     text-align: center;
     color: var(--nonary-color);
-}
-
-.column h1 {
-    margin-bottom: 15px;
-    color: var(--denary-color);
+    grid-column: 2 / span 2;
 }
 
 table {
