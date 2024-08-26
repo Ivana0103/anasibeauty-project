@@ -255,7 +255,6 @@ a {
     height: 44px;
     padding: 10px 20px;
     margin-right: 20px;
-    border-radius: 30px;
     background-color: var(--tertiary-color);
     color: var(--nonary-color);
     border-color: var(--tertiary-color);
